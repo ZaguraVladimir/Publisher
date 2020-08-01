@@ -1,7 +1,9 @@
 package main
 
 import (
+	"Publisher/publisher"
 	"flag"
+	"fmt"
 	"log"
 	"os"
 	"path/filepath"
@@ -23,7 +25,7 @@ func init() {
 
 func main() {
 
-	//p:=publisher{}
-	//p.Scan()
+	p := publisher.NewPublisher(*sourceDir, *resultDir)
+	fmt.Print(p)
 
 }
